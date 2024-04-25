@@ -29,7 +29,7 @@ export default async function migrations(request, response) {
 
   dbClient.end();
 
-  return response.status(405).json("Não é possível usar este recurso");
+  return response.status(405).end();
 }
 
 function getDefaultMigrationsOptions(dbClient) {
